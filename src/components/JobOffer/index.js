@@ -1,6 +1,6 @@
 import React from 'react';
 
-const JobOffer = ({offer}) => {
+const JobOffer = ({offer, filters}) => {
 
   return (
     <li key={offer.id} 
@@ -29,15 +29,15 @@ const JobOffer = ({offer}) => {
           </div>
         </div>
         <div className="flex gap-3 flex-wrap">
-          <button className="btn">{offer.role}</button>
-          <button className="btn">{offer.level}</button>
+          <button className="btn" onClick={() => filters.setRole(offer.role)}>{offer.role}</button>
+          <button className="btn" onClick={() => filters.setLevel(offer.level)}>{offer.level}</button>
 
         {offer.languages.map((language) => (
-            <button className="btn">{language}</button>
+            <button className="btn" key={language} onClick={() => filters.addLanguage(language)}>{language}</button>
         ))}
 
         {offer.tools.map((tool) => (
-          <button className="btn">{tool}</button>
+          <button className="btn" key={tool} onClick={() => filters.addTool(tool)}>{tool}</button>
         ))}
         </div>
       </li>
