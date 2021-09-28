@@ -1,3 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+  font-size: 0.9375rem; /* 15px */
+}
+
+header {
+  height: 156px;
+} 
+
+.btn {
+  @apply font-bold text-cyan-dark py-2 px-2 bg-cyan-lightGrayish rounded-lg md:hover:bg-cyan-dark md:hover:text-cyan-lightGrayish transition duration-500 ease-in-out;
+}
+
+.btn__filtered {
+  @apply font-bold text-cyan-dark pl-2 bg-cyan-lightGrayish md:hover:bg-cyan-dark md:hover:text-cyan-lightGrayish transition duration-500 ease-in-out;
+}
+
+.btn__clear {
+  @apply font-bold text-cyan-darkGrayish text-sm md:hover:underline;
+}
+
+.positioning {
+  @apply w-14 absolute;
+  top: -60%;
+  left: 0;
+  transform: translateY(40%);
+}
+
+.dots {
+  @apply relative;
+}
+
+.dots::before,
+.dots::after {
+  content: '';
+  position: absolute;
+  background-color: #7b8e8e;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+}
+
+.dots::before {
+  left: -25%;
+  top: 25%;
+}
+
+.dots::after {
+  right: -25%;
+  top: 25%;
+}
+
+.box-positioning {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media (min-width: 995px) {
+  .positioning {
+    @apply w-28 h-full object-cover static;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+}
