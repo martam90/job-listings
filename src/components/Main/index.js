@@ -89,6 +89,7 @@ const Main = () => {
   // komponentam FilterSet + JobOffers predavame jako props objekt filters
   return (
     <main className="bg-cyan-lightGrayish py-12 px-8 relative">
+      <h1 className="sr-only hidden">Job offers</h1>
       <div className="absolute box-positioning w-full px-8">
         <FilterSet filters={filters} /> 
       </div>

@@ -16,7 +16,12 @@ body {
 
 header {
   height: 156px;
-} 
+}
+
+main {
+  margin: 0 auto;
+  max-width: 73rem;
+}
 
 .btn {
   @apply font-bold text-cyan-dark text-sm py-2 px-2 bg-cyan-lightGrayish rounded md:hover:bg-cyan-dark md:hover:text-cyan-lightGrayish transition duration-500 ease-in-out;
