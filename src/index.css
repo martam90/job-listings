@@ -4,9 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  min-height: 100vh;
+}
 
 body {
   font-size: 0.9375rem; /* 15px */
+  background: #eef6f6;
 }
 
 header {
@@ -14,11 +19,11 @@ header {
 } 
 
 .btn {
-  @apply font-bold text-cyan-dark py-2 px-2 bg-cyan-lightGrayish rounded-lg md:hover:bg-cyan-dark md:hover:text-cyan-lightGrayish transition duration-500 ease-in-out;
+  @apply font-bold text-cyan-dark text-sm py-2 px-2 bg-cyan-lightGrayish rounded md:hover:bg-cyan-dark md:hover:text-cyan-lightGrayish transition duration-500 ease-in-out;
 }
 
 .btn__filtered {
-  @apply font-bold text-cyan-dark pl-2 bg-cyan-lightGrayish md:hover:bg-cyan-dark md:hover:text-cyan-lightGrayish transition duration-500 ease-in-out;
+  @apply flex items-center gap-2 text-sm font-bold text-cyan-dark pl-2 bg-cyan-lightGrayish rounded-l;
 }
 
 .btn__clear {
@@ -26,7 +31,7 @@ header {
 }
 
 .positioning {
-  @apply w-14 absolute;
+  @apply w-14 h-auto absolute object-cover;
   top: -60%;
   left: 0;
   transform: translateY(40%);
@@ -65,7 +70,7 @@ header {
 
 @media (min-width: 995px) {
   .positioning {
-    @apply w-28 h-full object-cover static;
+    @apply w-28 h-full static;
     top: auto;
     left: auto;
     transform: none;

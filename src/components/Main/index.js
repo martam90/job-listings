@@ -89,9 +89,9 @@ const Main = () => {
   // komponentam FilterSet + JobOffers predavame jako props objekt filters
   return (
     <main className="bg-cyan-lightGrayish py-12 px-8 relative">
-      <section className="absolute box-positioning w-full px-8">
+      <div className="absolute box-positioning w-full px-8">
         <FilterSet filters={filters} /> 
-      </section>
+      </div>
       <JobOffers filters={filters}/>
     </main>
   );

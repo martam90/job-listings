@@ -13,7 +13,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      'sans': ['Spartan'],
+      'sans': ['Spartan', 'sans-serif'],
     },
     borderColor: (theme) => ({
       ...theme('colors'),

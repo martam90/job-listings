@@ -11,7 +11,7 @@ const JobOffer = ({offer, filters}) => {
             <div>
             <div className="flex items-center pt-4 gap-x-2">
               <p className="font-bold text-cyan-dark">{offer.company}</p>
-              <div className="flex gap-x-2">
+              <div className="flex flex-wrap gap-x-2">
                 <span className={offer.new ? 'font-bold uppercase bg-cyan-dark text-cyan-lightGrayish rounded-full py-2 px-2 text-xs' : 'hidden'}>new!</span>
                 <span className={offer.featured ? 'font-bold uppercase bg-cyan-veryDarkGrayish text-cyan-lightGrayish rounded-full py-2 px-2 text-xs' : 'hidden'}>featured</span>
               </div>

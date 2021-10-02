@@ -5,7 +5,7 @@ import JobOffer from '../JobOffer/index.js';
 const JobOffers = ({filters}) => {
   // v poli data filtrujeme nabidky, ktere neodpovidaji nastavenym filtrum
   return (
-    <section className="mt-4">
+    <section className="mt-24">
       <ul>
       {data
         .filter((offer) => filters.matches(offer))
